@@ -8,6 +8,34 @@
 コンパイラは [pLaTeX2e](https://oku.edu.mie-u.ac.jp/~okumura/jsclasses/) を採用しています．
 [Overleaf](https://www.overleaf.com)や[Cloud LaTeX](https://cloudlatex.io)を用いる際は「Compiler」か「LaTeX Engine」と書かれている箇所で「LaTeX」や「platex」を選択してください．詳細は，[Tutorials - Overleaf, Online LaTeX Editor](https://www.overleaf.com/learn/latex/Tutorials)や[Cloud LaTeX の登録の仕方・使い方](https://cloudlatex.io/how-to-use-cl)に記載されています（2023年11月現在）．
 
+## 動作確認
+- Windows10, Windows11での[Visual Studio Code](https://code.visualstudio.com/)（[TeX Live](https://texwiki.texjp.org/?TeX%20Live)2024でインストールしていることが前提）．Visual Studio Codeはただのエディタなので他でも設定をすれば動くと思います．
+- [Overleaf](https://www.overleaf.com), [CloudLaTeX](https://cloudlatex.io)で2023年11月現在確認済み
+  - Overleafで動作させるときにTimeoutエラーが出るかもしれませんが，以下のように対処できます。（2024年12月5日）
+    - プレビュー画面の左上にある「リコンパイル」から，「コンパイルモード」，「ファスト[draft]」に変更
+    - 再度コンパイル
+    - 再度「リコンパイル」から，「コンパイルモード」，「ノーマル」に戻す
+    - またコンパイルすると正常に動作
+
+## 各種リンク
+上述の内，重要なリンクを記載しておきます．
+- [KUTLMS](https://lms.kochi-tech.ac.jp/)
+- [TeX Live](https://texwiki.texjp.org/?TeX%20Live)
+- [Overleaf](https://www.overleaf.com)
+- [CloudLaTeX](https://cloudlatex.io)
+
+TeXでの執筆時に役立つリンク集（2023年11月現在）
+- [理科系の作文技術](https://www.chuko.co.jp/shinsho/1981/09/100624.html): 王道の本．
+- [［改訂第9版］LaTeX2ε美文書作成入門](https://gihyo.jp/book/2023/978-4-297-13889-9): 日本語でLaTeXを使うときの必須の本．3年に一度更新されるらしいです．
+- [LaTeXにおける正しい論文の書き方](https://qiita.com/birdwatcher/items/5ec42b35d84d3ee2ffbb): 数式の書き方が豊富にあります．基本的にはこれで充分!?
+- [アカデミックヤクザにキレられないためのLaTeX論文執筆メソッド](https://qiita.com/suigin/items/10960e516f2d44f6b6de): 体裁の重要性や注意点について書いています．
+- [イショティハドゥスにキレられないための LaTeX 論文執筆メソッド](https://qiita.com/Ishotihadus/items/bbbb85f54e6a4e7aaac0): 「アカデミックヤクザにキレられないためのLaTeX論文執筆メソッド」にインスパイアされたサイト? 余白やフロートの設定に詳しいです．
+- [フロートが配置される場所をコントロールしたい](https://qiita.com/Yarakashi_Kikohshi/items/05c9ce4613b1334827c8): 前述のフロートについて知らなかったので詳しく書いているサイトを置きました．図の配置に悩んでいる人は一読しましょう．
+
+日本語参考文献を扱う際の太字表記の簡易的な回避（2023年12月現在）
+-  [電気学会/IEEE, 日英両対応bstファイル](https://github.com/ehki/jIEEEtran): 文献の jIEEEtran をBibLaTeXの代わりに用いれば報告書の要件にある参考文献の書き方に近づきます．
+-  [biblatex で日本語文献をサポート](https://gist.github.com/idiotWu/4879a88a3e34618cc8215a43ba2e9fbd): リンク先の```u-jap.tex```の内容を```main_LuaTeX.tex```の```\usepackage[...]{biblatex}```の直後に入れて、bibファイルで日本語文献には```langid = {Japanese},```を```@(...){文献識別名,```の後に入れると動作します．
+
 ## 各種フォルダ・ファイル
 - figures: 図が入っているフォルダです
   - biblatex_settings.png: main_pLaTeX.tex内のbiblatexの設定をスクリーンショットで撮影したものです
@@ -42,41 +70,12 @@
 - README.md: 内容物の説明で，このファイルのことです
 - references.bib: 参考文献を入れるbibファイルです
 
-## 動作確認
-- Windows10, Windows11での[Visual Studio Code](https://code.visualstudio.com/)（[TeX Live](https://texwiki.texjp.org/?TeX%20Live)2024でインストールしていることが前提）．Visual Studio Codeはただのエディタなので他でも設定をすれば動くと思います．
-- [Overleaf](https://www.overleaf.com), [CloudLaTeX](https://cloudlatex.io)で2023年11月現在確認済み
-  - Overleafで動作させるときにTimeoutエラーが出るかもしれませんが，以下のように対処できます。（2024年12月5日）
-    - プレビュー画面の左上にある「リコンパイル」から，「コンパイルモード」，「ファスト[draft]」に変更
-    - 再度コンパイル
-    - 再度「リコンパイル」から，「コンパイルモード」，「ノーマル」に戻す
-    - またコンパイルすると正常に動作
-
-## 各種リンク
-上述の内，重要なリンクを記載しておきます．
-- [KUTLMS](https://lms.kochi-tech.ac.jp/)
-- [TeX Live](https://texwiki.texjp.org/?TeX%20Live)
-- [Overleaf](https://www.overleaf.com)
-- [CloudLaTeX](https://cloudlatex.io)
-
-TeXでの執筆時に役立つリンク集（2023年11月現在）
-- [理科系の作文技術](https://www.chuko.co.jp/shinsho/1981/09/100624.html): 王道の本．
-- [［改訂第9版］LaTeX2ε美文書作成入門](https://gihyo.jp/book/2023/978-4-297-13889-9): 日本語でLaTeXを使うときの必須の本．3年に一度更新されるらしいです．
-- [LaTeXにおける正しい論文の書き方](https://qiita.com/birdwatcher/items/5ec42b35d84d3ee2ffbb): 数式の書き方が豊富にあります．基本的にはこれで充分!?
-- [アカデミックヤクザにキレられないためのLaTeX論文執筆メソッド](https://qiita.com/suigin/items/10960e516f2d44f6b6de): 体裁の重要性や注意点について書いています．
-- [イショティハドゥスにキレられないための LaTeX 論文執筆メソッド](https://qiita.com/Ishotihadus/items/bbbb85f54e6a4e7aaac0): 「アカデミックヤクザにキレられないためのLaTeX論文執筆メソッド」にインスパイアされたサイト? 余白やフロートの設定に詳しいです．
-- [フロートが配置される場所をコントロールしたい](https://qiita.com/Yarakashi_Kikohshi/items/05c9ce4613b1334827c8): 前述のフロートについて知らなかったので詳しく書いているサイトを置きました．図の配置に悩んでいる人は一読しましょう．
-
-日本語参考文献を扱う際の太字表記の簡易的な回避（2023年12月現在）
--  [電気学会/IEEE, 日英両対応bstファイル](https://github.com/ehki/jIEEEtran): 文献の jIEEEtran をBibLaTeXの代わりに用いれば報告書の要件にある参考文献の書き方に近づきます．
--  [biblatex で日本語文献をサポート](https://gist.github.com/idiotWu/4879a88a3e34618cc8215a43ba2e9fbd): リンク先の```u-jap.tex```の内容を```main_LuaTeX.tex```の```\usepackage[...]{biblatex}```の直後に入れて、bibファイルで日本語文献には```langid = {Japanese},```を```@(...){文献識別名,```の後に入れると動作します．
-
 ## 作成者の能力不足でできなかったところ
 以下の箇所やそれ以外で気になったところを変えることのできる人募集です！！！というか作って配布して欲しいです！！！（ぶっちゃけやりとりするのめんd (ry）
 1. classファイルで本文内の設定や表紙の設定をしたかった
 2. bibLaTeXでの英語と日本語文献の完全な併用
 3. bibLaTeXの2重波括弧の自動化や回避（面倒だったからというのもある）
 4. LaTeXの基本的な使い方の説明（面倒すぎるからできなかった）
-
 
 ## 連絡先
 高知工科大学大学院 工学研究科 基盤工学コース 1年　地主拓未 (2024年12月現在)
