@@ -98,3 +98,8 @@ E-mail: takumi.jinushi (あっと) gmail.com
   - [kodaimai](https://github.com/kodaimai)様によるご提案のもと，appendixCを追加し，```out```フォルダの削除と```KUT_ele_LuaTeX_ver.pdf```を更新
   - ```main_LuaTeX.tex```を```main.tex```に変更
   - 誤字の訂正
+- 2025年 2月24日 v.1.2.1作成
+  - 参考文献が目次で表示されないバグを修正
+  - テンプレートの容量を削減
+  - 誤字の訂正
+  - .latexmkrcファイルを変更
